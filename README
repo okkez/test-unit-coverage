@@ -1,0 +1,25 @@
+= Test::Unit::Coverage
+
+* https://github.com/okkez/test-unit-coverage
+
+== Description
+
+Test::Unit::Coverage - A code coverage tool for Test::Unit.
+
+== Install
+
+TODO.
+
+== Usage
+
+  require 'test/unit/coverage'
+
+Use default printer which print result to $stdout.
+
+== License
+
+LGPLv2.1 or later.
+
+== Authors
+
+* okkez
