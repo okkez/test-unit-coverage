@@ -33,6 +33,19 @@ module Test
           end
           @@enable
         end
+
+        @@printer = nil
+        def printer=(printer)
+          if enable?
+            @@printer = printer
+          else
+            warn "coverage is disabled."
+          end
+        end
+
+        def printer
+          @@printer
+        end
       end
 
       class Collector
@@ -45,7 +58,7 @@ module Test
         attr_accessor :printer
 
         def initialize
-          @printer = DefaultPrinter.new
+          @printer = Coverage.printer || DefaultPrinter.new
         end
 
         def attach_to_mediator(mediator)
