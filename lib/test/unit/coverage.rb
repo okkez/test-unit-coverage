@@ -45,7 +45,7 @@ module Test
         attr_accessor :printer
 
         def initialize
-          @printer = FlatPrinter.new
+          @printer = DefaultPrinter.new
         end
 
         def attach_to_mediator(mediator)
@@ -64,7 +64,7 @@ module Test
         end
       end
 
-      class FlatPrinter
+      class DefaultPrinter
         def initialize(out=$stdout)
           @out = out
         end
