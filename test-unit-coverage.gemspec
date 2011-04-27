@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["okkez"]
-  s.date = %q{2011-04-26}
+  s.date = %q{2011-04-27}
   s.description = %q{This library provides the ability to measure the code coverage for Ruby 1.9.}
   s.email = %q{okkez000@gmail.com}
   s.extra_rdoc_files = [
@@ -22,13 +22,14 @@ Gem::Specification.new do |s|
     "README",
     "Rakefile",
     "VERSION",
-    "lib/test/unit/coverage.rb"
+    "lib/test/unit/coverage.rb",
+    "test-unit-coverage.gemspec"
   ]
   s.homepage = %q{http://github.com/okkez/test-unit-coverage}
   s.licenses = ["LGPL"]
   s.require_paths = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.1")
-  s.rubygems_version = %q{1.5.3}
+  s.rubygems_version = %q{1.5.2}
   s.summary = %q{This library provides the ability to measure the code coverage for Ruby 1.9.}
 
   if s.respond_to? :specification_version then
@@ -38,15 +39,18 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<test-unit>, [">= 2.2.0"])
+      s.add_development_dependency(%q<coverage-printer>, [">= 0"])
     else
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<test-unit>, [">= 2.2.0"])
+      s.add_dependency(%q<coverage-printer>, [">= 0"])
     end
   else
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<test-unit>, [">= 2.2.0"])
+    s.add_dependency(%q<coverage-printer>, [">= 0"])
   end
 end
 
