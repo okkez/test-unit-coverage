@@ -8,13 +8,19 @@ Test::Unit::Coverage - A code coverage tool for Test::Unit.
 
 == Install
 
-TODO.
+  $ gem install test-unit-coverage
 
 == Usage
 
   require 'test/unit/coverage'
 
 Use default printer which print result to $stdout.
+
+Use HTML printer.
+
+  require 'test/unit/coverage'
+  require 'coverage/html_printer'
+  Test::Unit::Coverage.printer = Coverage::HTMLPrinter.new
 
 == License
 
